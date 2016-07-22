@@ -1,1 +1,1 @@
-# money.txt-scala
+# money.txt-scalaA personal scala training project aiming to reimplementand possibly improve [money.txt](https://github.com/arwer13/money.txt).
