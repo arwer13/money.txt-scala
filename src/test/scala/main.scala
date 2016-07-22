@@ -20,6 +20,7 @@ class MoneyTxtParsing extends Specification {
     }
 
     "load sample money.txt file" >> {
+      pending
       //    java.lang.ClassLoader.getRes
       //    val filename = "/home/arwer/project/money.txt-scala/src/test/resources/money-sample.txt"
       //    Source.fromFile(filename).getLines.toList.map(

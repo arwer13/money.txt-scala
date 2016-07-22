@@ -11,13 +11,15 @@ object Money {
     val pattern = """ *(\d\d\d\d\.\d\d\.\d\d)? *(.*?) +([\(\)\d\+-\.,\*]+)\w*(.*)""".r
 
     pattern.findFirstMatchIn(line) match {
+      // alternative approach is to use named groups:
+      // http://stackoverflow.com/questions/3029657/scala-regex-named-capturing-groups
       case Some(pattern(date, cats, expression, note)) => Entry(
         date,
         cats.split(",").map((x:String) => x.trim).toList,
         expression.toFloat,
         note.trim
       )
-      case _ => Entry("", List(), 0, "")
+      case None => Entry("", List(), 0, "")
     }
   }
 
